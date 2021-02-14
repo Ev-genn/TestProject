@@ -1,0 +1,7 @@
+app\model\Timer.class
+app\model\Animal.class
+app\config\AppConfig.class
+app\model\AnimalsCage.class
+app\model\Dog.class
+app\Application.class
+app\model\Cat.class
