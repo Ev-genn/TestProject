@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        th {
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form method="post" action="/login">
+        <table>
+        <tr>
+            <td>Login</td>
+            <td>:</td>
+            <td><input name="j_username"/></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input name="j_password"/></td>
+        </tr>
+        </table>
+        <div>
+            <input type="submit"/>
+        </div>
+        <br>
+        <div>
+            <a th:href="@{/login/add}">Registration</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,9 +1,10 @@
 package web.Dao;
 
 import org.springframework.stereotype.Repository;
+import web.model.Role;
 import web.model.User;
-
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
@@ -36,5 +37,29 @@ public class UserDaoImpl implements UserDao{
     @Override
     public List<User> getListUser() {
         return entityManager.createQuery("select u from User u", User.class).getResultList();
+    }
+
+    @Override
+    public User getUserByLogin(String username) {
+        try {
+            return entityManager.createQuery("select u from User u  " +
+                            "where u.username = :username", User.class)
+                    .setParameter("username", username)
+                    .getSingleResult();
+
+        } catch (NoResultException e){
+            return null;
+        }
+    }
+
+    public Role getRoleById(long id){
+        List<Role> roles = entityManager.createQuery("select r from Role r" ,Role.class).getResultList();
+        if(roles.isEmpty()) {
+            Role role1 = new Role(1L,"ROLE_USER");
+            Role role2 = new Role(2L,"ROLE_ADMIN");
+            entityManager.merge(role1);
+            entityManager.merge(role2);
+        }
+        return entityManager.find(Role.class, id);
     }
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <style>
+        th {
+            text-align: left;
+            padding: 5px;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+<a th:href="@{/login}">Back</a>
+<br/><br/>
+<form  th:action="@{/login/add}" th:object="${user}" method="POST">
+    <table border="0">
+        <tr>
+            <td>Login</td>
+            <td>:</td>
+            <td><input type="text" th:field="*{username}" /></td>
+            <td><span th:if="${#fields.hasErrors('username')}">Login Error the username must contain at least 2 characters</span></td>
+            <td><span th:if="${loginError}">this username is busy choose another</span></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" th:field="*{password}" /></td>
+            <td><span th:if="${#fields.hasErrors('password')}">Password Error, the password must contain at least 2 characters</span></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><input type="text" th:field="*{name}" /></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>:</td>
+            <td><input type="text" th:field="*{lastName}" /></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>:</td>
+            <td><input type="text" th:field="*{age}" /></td>
+            <td><span th:if="${#fields.hasErrors('age')}">Enter the age from 1 to 150</span></td>
+        </tr>
+        <tr>
+            <td> Role Admin</td>
+            <td>:</td>
+            <td><input type="checkbox" name="checkAdminRole" th:checked="${checkAdminRole}"></td>
+        </tr>
+    </table>
+    <input type="submit" th:value="Create" />
+</form>
+
+<br/>
+</body>
+</html>
