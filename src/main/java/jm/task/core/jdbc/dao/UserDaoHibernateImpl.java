@@ -8,9 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
-    public UserDaoHibernateImpl() {
-
-    }
 
     @Override
     public void createUsersTable() {
@@ -71,7 +68,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<>();
         try (Session session = Util.getSessionFactory().openSession()) {
-            users = session.createQuery("From User").list();
+            return session.createQuery("From User").list();
         } catch (Exception e) {
             System.out.println("Error list user");
         }
@@ -82,10 +79,8 @@ public class UserDaoHibernateImpl implements UserDao {
     public void cleanUsersTable() {
         try (Session session = Util.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
-            List<User> users = getAllUsers();
-            for (User user : users) {
-                session.delete(user);
-            }
+            String sql = "TRUNCATE TABLE User";
+            session.createNativeQuery(sql).executeUpdate();
             transaction.commit();
         } catch (Exception e) {
             System.out.println("Error clean user");

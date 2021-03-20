@@ -24,9 +24,9 @@ public class Util {
 
                 properties.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/test?useSSL=false&allowPublicKeyRetrieval=true");
                 properties.setProperty("hibernate.connection.username", "root");
-                properties.setProperty("hibernate.connection.password", "54321");
+                properties.setProperty("hibernate.connection.password", "root");
                 properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-                properties.setProperty("hibernate.show_sql", "false");
+                properties.setProperty("hibernate.show_sql", "true");
                 properties.setProperty("hibernate.current_session_context_class", "thread");
                 configuration.addProperties(properties)
                         .addAnnotatedClass(User.class);
@@ -47,7 +47,7 @@ public class Util {
         String hostName = "localhost";
         String dbName = "test";
         String userName = "root";
-        String password = "54321";
+        String password = "root";
 
         return getMySQLConnection(hostName, dbName, userName, password);
     }
