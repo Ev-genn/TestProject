@@ -2,9 +2,11 @@ package web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import web.model.Role;
 import web.model.User;
+import web.service.SecurityService;
 import web.service.UserService;
 
 import java.util.HashSet;
@@ -15,9 +17,11 @@ import java.util.Set;
 public class AdminController {
 
     private UserService userService;
+    private SecurityService securityService;
 
-    public AdminController(UserService userService) {
+    public AdminController(UserService userService, SecurityService securityService) {
         this.userService = userService;
+        this.securityService = securityService;
     }
 
     @GetMapping(value = "/user")
@@ -27,7 +31,7 @@ public class AdminController {
     }
 
     @PostMapping(value = "/user")
-    public String listUsers(){return "redirect:/admin/user";}
+    public String listUsers(){return "redirect:/user";}
 
     @GetMapping(value = "/user/add")
     public String showAdd(Model model) {
@@ -37,7 +41,21 @@ public class AdminController {
         return "user-edit";
     }
     @PostMapping(value = "/user/add")
-    public String addUser(@ModelAttribute("user") User user){
+    public String addUser(@ModelAttribute("user") User user, @ModelAttribute("checkAdminRole") String checkAdminRole,
+                          BindingResult bindingResult, Model model){
+        if(bindingResult.hasErrors()){
+            return "registration";
+        }
+        if(userService.getUserByLogin(user.getUsername()) != null){
+            model.addAttribute("loginError", true);
+            return "registration";
+        }
+        Set<Role> roles = new HashSet<>();
+        roles.add(securityService.getRoleByName("ROLE_USER"));
+        if(!checkAdminRole.equals("")) {
+            roles.add(securityService.getRoleByName("ROLE_ADMIN"));
+        }
+        user.setRoles(roles);
         userService.addUser(user);
         return "redirect:/admin/user";
     }
@@ -59,9 +77,9 @@ public class AdminController {
                              @ModelAttribute("user") User user, @ModelAttribute("checkAdminRole") String checkAdminRole) {
         user.setId(id);
         Set<Role> roles = new HashSet<>();
-        roles.add(userService.getRoleById(1L));
+        roles.add(securityService.getRoleByName("ROLE_USER"));
         if(!checkAdminRole.equals("")) {
-            roles.add(userService.getRoleById(2L));
+            roles.add(securityService.getRoleByName("ROLE_ADMIN"));
         }
         user.setRoles(roles);
         userService.updateUser(user);

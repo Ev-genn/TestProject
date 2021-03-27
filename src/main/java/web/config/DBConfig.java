@@ -1,7 +1,6 @@
 package web.config;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -23,8 +22,11 @@ import java.util.Properties;
 @ComponentScan("web")
 public class DBConfig {
 
-    @Autowired
-    private Environment env;
+    private final Environment env;
+
+    public DBConfig(Environment env) {
+        this.env = env;
+    }
 
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();

@@ -1,12 +1,9 @@
 package web.service;
 
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import web.Dao.UserDao;
-import web.model.Role;
 import web.model.User;
 import java.util.List;
 
@@ -22,10 +19,9 @@ public class UserServiceImpl implements UserService {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
-    @Transactional
     @Override
     public User getUserById(long id) {
-        return userDao.getUserById(id);
+       return (userDao.getUserById(id)).orElseGet(null);
     }
 
     @Transactional
@@ -47,28 +43,14 @@ public class UserServiceImpl implements UserService {
         userDao.remove(id);
     }
 
-    @Transactional
     @Override
     public List<User> getListUser() {
         return userDao.getListUser();
     }
 
-    @Transactional
-    public Role getRoleById(long id){
-        return userDao.getRoleById(id);
-    }
-
-    @Transactional
     @Override
     public User getUserByLogin(String username) {
-        return userDao.getUserByLogin(username);
+        return (userDao.getUserByLogin(username)).orElse(null);
     }
 
-    @Transactional
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userDao.getUserByLogin(username);
-        if(user == null) {throw new UsernameNotFoundException("User not found");}
-        return  user;
-    }
 }

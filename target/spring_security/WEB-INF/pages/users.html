@@ -37,7 +37,7 @@
                 <td th:utext="${user.getUsername()}">...</td>
                 <td th:utext="${user.password}">...</td>
                 <td>
-                    <span th:each="role : ${user.getRoles()}"><span th:utext="${role.getName()}"/><br></span>
+                    <span th:each="role : ${user.getRoles()}"><span th:utext="${role.getRole()}"/><br></span>
                 </td>
                 <td th:utext="${user.name}">...</td>
                 <td th:utext="${user.lastName}">...</td>

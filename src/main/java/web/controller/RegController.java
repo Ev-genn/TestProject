@@ -6,6 +6,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import web.model.Role;
 import web.model.User;
+import web.service.SecurityService;
 import web.service.UserService;
 import javax.validation.Valid;
 import java.util.HashSet;
@@ -16,9 +17,11 @@ import java.util.Set;
 public class RegController {
 
     private UserService userService;
+    private SecurityService securityService;
 
-    public RegController(UserService userService) {
+    public RegController(UserService userService, SecurityService securityService) {
         this.userService = userService;
+        this.securityService = securityService;
     }
 
     @GetMapping("/login")
@@ -26,9 +29,8 @@ public class RegController {
 
     @GetMapping(value = "/login/add")
     public String showRegistration(Model model) {
-        String checkAdminRole = null;
         User user = new User();
-        model.addAttribute("checkAdminRole", checkAdminRole);
+        model.addAttribute("checkAdminRole", null);
         model.addAttribute("user", user);
         return "registration";
     }
@@ -44,9 +46,9 @@ public class RegController {
             return "registration";
         }
         Set<Role> roles = new HashSet<>();
-        roles.add(userService.getRoleById(1L));
+        roles.add(securityService.getRoleByName("ROLE_USER"));
         if(!checkAdminRole.equals("")) {
-            roles.add(userService.getRoleById(2L));
+            roles.add(securityService.getRoleByName("ROLE_ADMIN"));
         }
         user.setRoles(roles);
         userService.addUser(user);

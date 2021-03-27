@@ -1,12 +1,12 @@
 package web.model;
 
 import org.hibernate.validator.constraints.Range;
-import org.springframework.lang.NonNull;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Collection;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -25,18 +25,18 @@ public class User implements UserDetails {
     @Column(name = "password")
     private String password;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     private Set<Role> roles;
 
     @Column(name = "name")
-    String name;
+    private String name;
 
     @Column(name = "lastName")
-    String lastName;
+    private String lastName;
 
     @Range(min = 1, max = 150)
     @Column(name = "age")
-    int age;
+    private int age;
 
     public User(){}
 
@@ -140,5 +140,18 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return age == user.age && Objects.equals(id, user.id) && Objects.equals(username, user.username) && Objects.equals(password, user.password)  && Objects.equals(name, user.name) && Objects.equals(lastName, user.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password, name, lastName, age);
     }
 }

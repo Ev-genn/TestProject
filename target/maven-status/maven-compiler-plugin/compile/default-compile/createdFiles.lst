@@ -8,8 +8,10 @@ web\service\UserServiceImpl.class
 web\model\Role.class
 web\controller\AdminController.class
 web\Dao\UserDao.class
+web\service\SecurityService.class
 web\config\DBConfig.class
 web\config\handler\LoginSuccessHandler.class
 web\controller\UserController.class
 web\Dao\UserDaoImpl.class
+web\service\SecurityServiceImpl.class
 web\model\User.class

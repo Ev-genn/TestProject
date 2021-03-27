@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="spring-security:war exploded" />
+      <artifact name="spring-mvc:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,8 +10,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2e1c17-a190-4714-a8a1-116097d11f60" name="Default Changelist" comment="Задача DaoHibernate исправлено">
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_28_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_2_3_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c631133c-87cf-4381-820f-9206b20d0db5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c631133c-87cf-4381-820f-9206b20d0db5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_61_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_17.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_abego_treelayout_org_abego_treelayout_core_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_ST4_4_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_4_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_0_0_Alpha6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_1_3_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/Dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/Dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/Dao/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/AppInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/DBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/DBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/handler/LoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/handler/LoginSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/RegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/RegController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/userPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/Dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/Dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/Dao/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/Dao/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/config/AppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/AppInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/config/DBConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/DBConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/config/handler/LoginSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/handler/LoginSuccessHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/RegController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/RegController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/Dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/Dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/Dao/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/Dao/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/config/AppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/config/AppInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/config/DBConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/config/DBConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/config/handler/LoginSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/config/handler/LoginSuccessHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/controller/RegController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/controller/RegController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/classes/web/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/ST4-4.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/antlr-runtime-3.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/antlr4-4.8-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/antlr4-runtime-4.8-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/byte-buddy-1.10.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/hibernate-commons-annotations-5.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/hibernate-core-6.0.0.Alpha6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/icu4j-61.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/jandex-2.1.3.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/javax.json-1.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/lib/org.abego.treelayout.core-1.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/pages/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/pages/userPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring_security/WEB-INF/pages/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring_security/WEB-INF/pages/users.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +99,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -63,7 +141,7 @@
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="shared-indexes" />
@@ -81,15 +159,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -295,6 +371,11 @@
       <workItem from="1616316660142" duration="2456000" />
       <workItem from="1616319705976" duration="964000" />
       <workItem from="1616320696409" duration="943000" />
+      <workItem from="1616339508232" duration="16757000" />
+      <workItem from="1616579046557" duration="14121000" />
+      <workItem from="1616745442809" duration="4951000" />
+      <workItem from="1616750473795" duration="5848000" />
+      <workItem from="1616838963475" duration="1125000" />
     </task>
     <task id="LOCAL-00001" summary="Задача 2.3.1">
       <created>1614681300962</created>
@@ -303,7 +384,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614681300962</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="исправления 1">
+      <created>1616323394937</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616323394937</updated>
+    </task>
+    <task id="LOCAL-00003" summary="исправления 1">
+      <created>1616323426611</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616323426611</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +431,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Задача 2.3.1" />
     <MESSAGE value="Задача 2.4.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задача 2.4.2" />
+    <MESSAGE value="исправления 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправления 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -347,9 +443,24 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/web/controller/AdminController.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/web/controller/RegController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/Dao/UserDaoImpl.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="30" />
+          <line>56</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/web/Dao/UserDaoImpl.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
