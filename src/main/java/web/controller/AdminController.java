@@ -44,11 +44,11 @@ public class AdminController {
     public String addUser(@ModelAttribute("user") User user, @ModelAttribute("checkAdminRole") String checkAdminRole,
                           BindingResult bindingResult, Model model){
         if(bindingResult.hasErrors()){
-            return "registration";
+            return "/registration";
         }
         if(userService.getUserByLogin(user.getUsername()) != null){
             model.addAttribute("loginError", true);
-            return "registration";
+            return "/registration";
         }
         Set<Role> roles = new HashSet<>();
         roles.add(securityService.getRoleByName("ROLE_USER"));

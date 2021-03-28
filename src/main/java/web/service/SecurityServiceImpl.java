@@ -3,6 +3,7 @@ package web.service;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import web.Dao.RoleDao;
 import web.Dao.UserDao;
 import web.model.Role;
 
@@ -13,14 +14,16 @@ import java.util.Optional;
 public class SecurityServiceImpl implements SecurityService{
 
     private UserDao userDao;
+    private RoleDao roleDao;
 
-    public SecurityServiceImpl(UserDao userDao) {
+    public SecurityServiceImpl(UserDao userDao, RoleDao roleDao) {
         this.userDao = userDao;
+        this.roleDao = roleDao;
     }
 
     @Override
     public Role getRoleByName(String roleName) {
-        Optional<Role> roleOptional = userDao.getRoleByName(roleName);
+        Optional<Role> roleOptional = roleDao.getRoleByName(roleName);
         if(roleOptional.isPresent()) {return roleOptional.get();}
         else {
             addRole(roleName);
@@ -28,9 +31,11 @@ public class SecurityServiceImpl implements SecurityService{
         }
     }
 
+
     @Override
     public void addRole(String roleName) {
-        userDao.addRole(roleName);
+        Role role = new Role(roleName);
+        roleDao.save(role);
     }
 
     @Override

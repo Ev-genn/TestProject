@@ -21,26 +21,26 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserById(long id) {
-       return (userDao.getUserById(id)).orElseGet(null);
+       return (userDao.findById(id)).orElseGet(null);
     }
 
     @Transactional
     @Override
     public void addUser(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        userDao.addUser(user);
+        userDao.save(user);
     }
 
     @Transactional
     @Override
     public void updateUser(User user) {
-        userDao.updateUser(user);
+        userDao.save(user);
     }
 
     @Transactional
     @Override
     public void remove(long id) {
-        userDao.remove(id);
+        userDao.deleteById(id);
     }
 
     @Override
