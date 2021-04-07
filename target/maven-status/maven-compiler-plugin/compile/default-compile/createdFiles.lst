@@ -1,0 +1,14 @@
+web\service\UserService.class
+web\controller\RegController.class
+web\config\SecurityConfig.class
+web\service\UserServiceImpl.class
+web\model\Role.class
+web\Application.class
+web\controller\AdminController.class
+web\Dao\UserDao.class
+web\Dao\RoleDao.class
+web\service\SecurityService.class
+web\config\handler\LoginSuccessHandler.class
+web\controller\UserController.class
+web\service\SecurityServiceImpl.class
+web\model\User.class

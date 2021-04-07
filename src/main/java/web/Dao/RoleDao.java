@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import web.model.Role;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -14,4 +15,7 @@ public interface RoleDao extends JpaRepository<Role, Long> {
 
     @Query("select r from Role r where r.role = :roleName")
     Optional<Role> getRoleByName(@Param("roleName") String roleName);
+
+    @Query("select distinct r from Role r")
+    List<Role> getAllRoles ();
 }

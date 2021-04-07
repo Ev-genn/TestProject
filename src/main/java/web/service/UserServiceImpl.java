@@ -33,7 +33,10 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void updateUser(User user) {
+    public void updateUser(User user, boolean byCoding) {
+        if(byCoding){
+            user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        }
         userDao.save(user);
     }
 

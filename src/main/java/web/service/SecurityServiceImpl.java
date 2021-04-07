@@ -8,6 +8,7 @@ import web.Dao.UserDao;
 import web.model.Role;
 
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -36,6 +37,11 @@ public class SecurityServiceImpl implements SecurityService{
     public void addRole(String roleName) {
         Role role = new Role(roleName);
         roleDao.save(role);
+    }
+
+    @Override
+    public List<Role> getListRoles() {
+        return (roleDao.getAllRoles());
     }
 
     @Override

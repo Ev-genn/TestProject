@@ -1,6 +1,5 @@
 package web.model;
 
-import org.hibernate.validator.constraints.Range;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
@@ -34,7 +33,6 @@ public class User implements UserDetails {
     @Column(name = "lastName")
     private String lastName;
 
-    @Range(min = 1, max = 150)
     @Column(name = "age")
     private int age;
 

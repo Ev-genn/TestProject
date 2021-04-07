@@ -20,12 +20,7 @@ public class UserController {
 
     @GetMapping("/user")
     public String getUserPage(Principal principal, Model model){
-        User user = userService.getUserByLogin(principal.getName());
-        Set<Role> roles = user.getRoles();
-        if(roles.size() == 2){
-            model.addAttribute("admin", true);
-        }
-        model.addAttribute("user", user);
-        return "userPage";
+        model.addAttribute("authUser", userService.getUserByLogin(principal.getName()));
+        return "user";
     }
 }
