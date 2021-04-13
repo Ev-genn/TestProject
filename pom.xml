@@ -84,7 +84,7 @@
 
         <!-- https://mvnrepository.com/artifact/org.webjars.bower/jquery -->
         <dependency>
-            <groupId>org.webjars.bower</groupId>
+            <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
             <version>3.5.1</version>
         </dependency>

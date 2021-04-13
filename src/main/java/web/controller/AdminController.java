@@ -1,17 +1,18 @@
 package web.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import web.model.Role;
 import web.model.User;
 import web.service.SecurityService;
 import web.service.UserService;
-
-import javax.validation.Valid;
 import java.security.Principal;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-@Controller
+@RestController
 @RequestMapping("/admin")
 public class AdminController {
 
@@ -23,37 +24,60 @@ public class AdminController {
         this.securityService = securityService;
     }
 
-    @GetMapping(value = "")
-    public String listUsers(Model model, Principal principal){
-        User newUser = new User();
-        model.addAttribute("authUser", userService.getUserByLogin(principal.getName()));
-        model.addAttribute("allRole", securityService.getListRoles());
-        model.addAttribute("newUser", newUser);
-        model.addAttribute("listUsers", userService.getListUser());
-        return "admin";
+
+
+    @GetMapping(value = "/users")
+    public List<User> getListUsers(){
+        return userService.getListUser();
+    }
+
+    @GetMapping(value = "/principal")
+    public User getPrincipal(Principal principal){
+        return userService.getUserByLogin(principal.getName());
+    }
+
+    @GetMapping(value = "/{id}/user")
+    public User getUserById(@PathVariable long id){
+        return userService.getUserById(id);
+    }
+
+    @GetMapping(value = "/roles")
+    public List<Role> getAllRoles(){
+        return securityService.getListRoles();
     }
 
     @PostMapping(value = "/add")
-    public String addUser(@ModelAttribute User user){
-
-        userService.addUser(user);
-        return "redirect:/admin";
-    }
-
-    @PostMapping(value = {"edit"})
-    public String updateUser(@ModelAttribute("user") User user) {
-        boolean byCoding =  false;
-        User oldUser = userService.getUserById(user.getId());
-        if(!oldUser.getPassword().equals(user.getPassword())){
-            byCoding = true;
+    public ResponseEntity addUser(@RequestBody User user){
+        if(userService.getUserByLogin(user.getUsername()) != null){
+            return new ResponseEntity(HttpStatus.CONFLICT);
         }
-        userService.updateUser(user, byCoding);
-        return "redirect:/admin";
+        Set<Role> roleUser = new HashSet<>();
+        for (Role role:user.getRoles()) {
+            Role userRole = securityService.getRoleByName(String.valueOf(role));
+            roleUser.add(userRole);
+        }
+        user.setRoles(roleUser);
+        userService.addUser(user);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
-    @PostMapping(value = {"/{id}/delete"})
-    public String deleteUser(@PathVariable long id) {
+    @PutMapping(value = {"/edit"})
+    public void updateUser(@RequestBody User user) {
+        boolean byCoding = false;
+        if(!user.getPassword().equals("") || user.getPassword() != null){
+           byCoding = true;
+        }
+        Set<Role> roleUser = new HashSet<>();
+        for (Role role:user.getRoles()) {
+            Role userRole = securityService.getRoleByName(String.valueOf(role));
+            roleUser.add(userRole);
+        }
+        user.setRoles(roleUser);
+        userService.updateUser(user, byCoding);
+    }
+
+    @DeleteMapping(value = {"/delete/{id}"})
+    public void deleteUser(@PathVariable long id) {
         userService.remove(id);
-        return "redirect:/admin";
     }
 }

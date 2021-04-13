@@ -92,7 +92,7 @@
           <element id="library" level="project" name="Maven: javax.validation:validation-api:2.0.1.Final" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:4.6.0" />
           <element id="library" level="project" name="Maven: org.webjars:popper.js:2.5.4" />
-          <element id="library" level="project" name="Maven: org.webjars.bower:jquery:3.5.1" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:3.5.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

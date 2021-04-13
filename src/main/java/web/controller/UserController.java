@@ -1,15 +1,13 @@
 package web.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import web.model.Role;
+import org.springframework.web.bind.annotation.RestController;
 import web.model.User;
 import web.service.UserService;
 import java.security.Principal;
-import java.util.Set;
 
-@Controller
+
+@RestController
 public class UserController {
 
     private final UserService userService;
@@ -18,9 +16,8 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/user")
-    public String getUserPage(Principal principal, Model model){
-        model.addAttribute("authUser", userService.getUserByLogin(principal.getName()));
-        return "user";
+    @GetMapping(value = "user/principal")
+    public User getPrincipal(Principal principal){
+        return userService.getUserByLogin(principal.getName());
     }
 }

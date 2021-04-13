@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 import web.Dao.RoleDao;
 import web.Dao.UserDao;
 import web.model.Role;
-
-
 import java.util.List;
 import java.util.Optional;
 
@@ -31,7 +29,6 @@ public class SecurityServiceImpl implements SecurityService{
             return getRoleByName(roleName);
         }
     }
-
 
     @Override
     public void addRole(String roleName) {

@@ -16,11 +16,9 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Size(min = 2, max = 10)
     @Column(name = "login")
     private String username;
 
-    @Size(min = 2, max = 65)
     @Column(name = "password")
     private String password;
 
@@ -30,7 +28,7 @@ public class User implements UserDetails {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "lastName")
+    @Column(name = "last_Name")
     private String lastName;
 
     @Column(name = "age")
