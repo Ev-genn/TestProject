@@ -10,149 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2e1c17-a190-4714-a8a1-116097d11f60" name="Default Changelist" comment="Задача 3.1.3">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c631133c-87cf-4381-820f-9206b20d0db5/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c631133c-87cf-4381-820f-9206b20d0db5/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/c631133c-87cf-4381-820f-9206b20d0db5/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/controller/ShowPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/fav.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/web/controller/ShowPageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/public/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/static/fav.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/templates/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/templates/user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/Dao/RoleDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/Dao/UserDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/config/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/config/handler/LoginSuccessHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/controller/AdminController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/controller/RegController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/model/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/service/SecurityService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/service/SecurityServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/classes/web/service/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/HikariCP-3.4.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/antlr-2.7.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/aspectjweaver-1.9.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/attoparser-2.0.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/bootstrap-4.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/byte-buddy-1.10.20.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.5.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/dom4j-2.1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-5.1.2.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-5.4.28.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/hibernate-validator-6.0.16.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/istack-commons-runtime-3.0.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.11.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.11.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.11.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jackson-datatype-jdk8-2.11.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jackson-datatype-jsr310-2.11.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jackson-module-parameter-names-2.11.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jakarta.activation-1.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jakarta.annotation-api-1.3.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jakarta.el-3.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jakarta.persistence-api-2.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jakarta.transaction-api-1.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jakarta.xml.bind-api-2.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jandex-2.2.3.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.27.0-GA.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/javax.activation-api-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/javax.persistence-api-2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jaxb-api-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jaxb-runtime-2.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.4.1.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jquery-3.5.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/jul-to-slf4j-1.7.30.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/log4j-api-2.13.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/log4j-to-slf4j-2.13.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/logback-classic-1.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/logback-core-1.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-8.0.22.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/popper.js-2.5.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.30.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/snakeyaml-1.26.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-aspects-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-autoconfigure-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-aop-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-data-jpa-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-jdbc-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-json-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-logging-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-security-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-thymeleaf-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-tomcat-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-web-2.3.9.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-context-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-core-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-data-commons-2.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-data-jpa-2.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-jcl-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-orm-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-security-config-5.3.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-security-core-5.3.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-security-web-5.3.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-web-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-5.2.13.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-3.0.12.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-extras-java8time-3.0.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-spring5-3.0.12.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-core-9.0.43.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-websocket-9.0.43.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/txw2-2.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/unbescape-1.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/spring-security-1.0-SNAPSHOT/WEB-INF/lib/validation-api-2.0.1.Final.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c631133c-87cf-4381-820f-9206b20d0db5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c631133c-87cf-4381-820f-9206b20d0db5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_bower_jquery_3_5_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/handler/LoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/LoginSuccessHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/RegController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/ShowPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/ShowPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/SecurityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/SecurityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/SecurityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/SecurityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/SecurityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fav_icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/fav.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fav.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fav_icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/fav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/SecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/RegController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/ShowPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/ShowPageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/Role.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/service/SecurityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/SecurityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +93,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Rest" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -224,8 +109,8 @@
       <recent name="C:\Users\Admin\IdeaProjects\TestProject\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\IdeaProjects\TestProject\src\main\resources\static" />
       <recent name="C:\Users\Admin\IdeaProjects\TestProject\src\main\resources" />
+      <recent name="C:\Users\Admin\IdeaProjects\TestProject\src\main\resources\static" />
       <recent name="C:\Users\Admin\IdeaProjects\TestProject\src\main\resources\public" />
       <recent name="C:\Users\Admin\IdeaProjects\TestProject\src\main\resources\templates" />
       <recent name="C:\Users\Admin\IdeaProjects\TestProject\src\main\resources\static\" />
@@ -475,7 +360,7 @@
       <workItem from="1617733287142" duration="38802000" />
       <workItem from="1617872028246" duration="54192000" />
       <workItem from="1618044103975" duration="26356000" />
-      <workItem from="1618142951423" duration="31851000" />
+      <workItem from="1618142951423" duration="56079000" />
     </task>
     <task id="LOCAL-00001" summary="Задача 2.3.1">
       <created>1614681300962</created>
@@ -519,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617795044976</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Задача 3.1.3">
+      <created>1618302668293</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1618302668293</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,17 +456,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/controller/AdminController.java</url>
-          <line>40</line>
+          <line>37</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/controller/AdminController.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="46" />
+          <url>file://$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/web/controller/AdminController.java</url>
-          <line>64</line>
+          <line>52</line>
           <properties class="web.controller.AdminController" method="updateUser">
             <option name="EMULATED" value="true" />
           </properties>

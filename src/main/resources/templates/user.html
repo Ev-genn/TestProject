@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="application/ecmascript" src="/static/main.js"></script>
 </head>
 <body>
 
@@ -80,34 +81,8 @@
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
         crossorigin="anonymous"></script>
 <script>
-    async function getPrincipal(){
-        let response = await fetch('user/principal');
-        let users = await response.json();
-
-        let roles = users.roles;
-        var userRoles = "";
-        roles.forEach(function (role){
-            userRoles += role.role.substring(5) + " ";
-        });
-
-        let t = '<tbody>'
-
-            t+= '<tr>';
-            t+= '<td>' + users.id + '</td>';
-            t+= '<td>' + users.name + '</td>';
-            t+= '<td>' + users.lastName + '</td>';
-            t+= '<td>' + users.age + '</td>';
-            t+= '<td>' + users.username + '</td>';
-            t+= '<td>' + userRoles + '</td>';
-            t+= '</tr>';
-
-        t+='</tbody>';
-        document.getElementById('principalTable').innerHTML = t;
-        $('#navbarText').text(users.username + ' with role: ' + userRoles)
-
-    }
     $(document).ready(function (){
-       getPrincipal()
+       getPrincipal('user/principal')
     });
 </script>
 </body>

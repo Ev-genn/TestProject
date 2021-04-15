@@ -7,8 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="../static/main.js"></script>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script type="application/ecmascript" src="/static/main.js"></script>
+    <link rel="icon" type="image/png" href="/static/fav.png">
 </head>
 <body>
 <!-- Nav bar -->
@@ -282,192 +282,35 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
         crossorigin="anonymous"></script>
+
 <script>
-    async function getTableUser(){
-        let response = await fetch('admin/users');
-        let users = await response.json()
-        let k = '<tbody>'
-        for(let i = 0;i < users.length; i++){
-            let roles = users[i].roles;
-            let userRoles = "";
-            roles.forEach(function (role){
-                userRoles += role.role.substring(5) + " ";
-            })
-            k+= '<tr>';
-            k+= '<td>' + users[i].id + '</td>';
-            k+= '<td>' + users[i].name + '</td>';
-            k+= '<td>' + users[i].lastName + '</td>';
-            k+= '<td>' + users[i].age + '</td>';
-            k+= '<td>' + users[i].username + '</td>';
-            k+= '<td>' + userRoles + '</td>';
-            k+= '<td>' + '<a href="/admin/' +users[i].id + '/user" class="btn btn-primary modBtn eBtn" >' + 'Edit' + '</a>' + '</td>';
-            k+= '<td>' + '<a href="/admin/' +users[i].id + '/user" class="btn btn-danger modBtn dBtn" >' + 'Delete' + '</a>' + '</td>';
-            k+= '</tr>';
-        }
-        k+='</tbody>';
-        document.getElementById('importTable').innerHTML = k;
-
-        let responseRole = await fetch('admin/roles');
-        let roles = await responseRole.json();
-        $('#newUserRole').empty();
-        $('#roleEdit').empty();
-        for(let i=0; i<roles.length; i++){
-            $('#newUserRole').prepend('<option value=' + roles[i].role + '>' + roles[i].role.substring(5) + '');
-            $('#roleEdit').prepend('<option value=' + roles[i].role+'>' + roles[i].role.substring(5) + '</option>');
-        }
-    }
-
-    async function getPrincipal(){
-        let response = await fetch('admin/principal');
-        let users = await response.json();
-        let t = '<tbody>'
-
-            let roles = users.roles;
-            let userRoles = "";
-            roles.forEach(function (role){
-                userRoles += role.role.substring(5) + " ";
-            })
-            t+= '<tr>';
-            t+= '<td>' + users.id + '</td>';
-            t+= '<td>' + users.name + '</td>';
-            t+= '<td>' + users.lastName + '</td>';
-            t+= '<td>' + users.age + '</td>';
-            t+= '<td>' + users.username + '</td>';
-            t+= '<td>' + userRoles + '</td>';
-            t+= '</tr>';
-
-        t+='</tbody>';
-        document.getElementById('principalTable').innerHTML = t;
-        $('#navbarText').text(users.username + ' with role: ' + userRoles)
-
-    }
-    $(document).ready(function (){
+    $(document).ready(function () {
         getTableUser();
+        getPrincipal('admin/principal');
+        $('#newBtn').on( 'click', async function (event) {     // new user
+            event.preventDefault();
+            await createNewUser()
+        });
 
-        getPrincipal();
-
-        // Modal window
-        $('#importTable').on('click', '.modBtn', async function (event){
+        $('#importTable').on('click', '.modBtn', async function (event) { // show modal
             event.preventDefault();
             let href = $(this).attr('href');
-            let response = await fetch(href);
-            let user = await response.json();
-            $('#inputIdEdit').val(user.id);
-            $('#inputNameEdit').val(user.name);
-            $('#inputLastNameEdit').val(user.lastName);
-            $('#inputAgeEdit').val(user.age);
-            $('#inputEmailEdit').val(user.username);
-            let roles = user.roles;
-            $('#roleEdit option:selected').each(function(){
-                this.selected=false;
-            });
-            roles.forEach(function (role){
-                $('#roleEdit option[value ='+ role.role +']').prop('selected', true)
-            });
-
-            if ($(this).hasClass('eBtn')){
-                $('#modalTitle').text('Edit page');
-                $('#modalButton').text('Edit').addClass('editBtn btn-primary').removeClass('delBtn btn-danger');
-                $('.modInput').prop('readonly', false);
-            } else {
-                $('#modalTitle').text('Delete page');
-                $('#modalButton').text('Delete').addClass('delBtn btn-danger').removeClass('editBtn btn-primary');
-                $('.modInput').prop('readonly', true);
-            }
-            $('#myModal').modal('show');
+            let button = this;
+            await getModal(href, button)
         });
-        // Edit user
-        $('#myModal').on('click', '.editBtn',async function(event){
+
+        $('#myModal').on('click', '.editBtn',async function(event) { // edit user
             event.preventDefault();
-            let id =  $('#inputIdEdit').val();
-            let firstName = $('#inputNameEdit').val();
-            let lastName =  $('#inputLastNameEdit').val();
-            let age = $('#inputAgeEdit').val();
-            let username = $('#inputEmailEdit').val();
-            let password = $('#inputPassEdit').val();
-            let roles = $('#roleEdit').val()
-
-            var user = {
-                id: id,
-                username: username,
-                password: password,
-                roles: roles,
-                name: firstName,
-                lastName: lastName,
-                age: age
-            };
-
-            let response = await fetch('admin/edit', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                },
-                body: JSON.stringify(user)
-            });
-            $('#importTable').empty();
-            await getTableUser();
-            await getPrincipal();
-            $('#nav-admin-tab').click();
-            $('#myModal').modal('hide');
-            return false;
+            await editUser();
         });
-        // Delet user
-        $('#myModal').on('click', '.delBtn', async function (event){
+
+        $('#myModal').on('click', '.delBtn', async function (event) {
             event.preventDefault();
-            let id =  $('#inputIdEdit').val();
-            alert('in');
-            let response = await fetch('admin/delete/' + id, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                },
-
-            });
-            alert('out')
-            $('#importTable').empty();
-            await getTableUser();
-            $('#nav-admin-tab').click();
-            $('#myModal').modal('hide');
-        });
-        // New user
-        $('#newBtn').on( 'click', async function (event){
-            event.preventDefault();
-
-            var firstName = $('#inputName').val();
-            var lastName = $('#inputLastName').val();
-            var age = $('#inputAge').val();
-            var username = $('#inputEmail').val();
-            var password = $('#inputPass').val();
-            var roles = $('#newUserRole').val();
-
-            var user = {
-                username: username,
-                password: password,
-                roles: roles,
-                name: firstName,
-                lastName: lastName,
-                age: age
-            };
-
-            let response = await fetch('admin/add', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                },
-                body: JSON.stringify(user)
-            });
-            if(response.ok) {
-                $('#importTable').empty();
-                await getTableUser();
-                $('#nav-admin-tab').click();
-                return false;
-            } else {
-                alert('Email already in use')
-            }
-
+            await deleteUser();
         });
     });
 </script>
+
 </body>
 </html>
 </html>

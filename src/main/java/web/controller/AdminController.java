@@ -5,12 +5,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import web.model.Role;
 import web.model.User;
-import web.service.SecurityService;
+import web.security.SecurityService;
 import web.service.UserService;
 import java.security.Principal;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/admin")
@@ -23,8 +22,6 @@ public class AdminController {
         this.userService = userService;
         this.securityService = securityService;
     }
-
-
 
     @GetMapping(value = "/users")
     public List<User> getListUsers(){
@@ -48,32 +45,13 @@ public class AdminController {
 
     @PostMapping(value = "/add")
     public ResponseEntity addUser(@RequestBody User user){
-        if(userService.getUserByLogin(user.getUsername()) != null){
-            return new ResponseEntity(HttpStatus.CONFLICT);
-        }
-        Set<Role> roleUser = new HashSet<>();
-        for (Role role:user.getRoles()) {
-            Role userRole = securityService.getRoleByName(String.valueOf(role));
-            roleUser.add(userRole);
-        }
-        user.setRoles(roleUser);
-        userService.addUser(user);
-        return new ResponseEntity(HttpStatus.OK);
+        Optional<User> userByDb = userService.addUser(user);
+        return userByDb.isPresent() ? new ResponseEntity(HttpStatus.CONFLICT) : new ResponseEntity(HttpStatus.OK);
     }
 
     @PutMapping(value = {"/edit"})
     public void updateUser(@RequestBody User user) {
-        boolean byCoding = false;
-        if(!user.getPassword().equals("") || user.getPassword() != null){
-           byCoding = true;
-        }
-        Set<Role> roleUser = new HashSet<>();
-        for (Role role:user.getRoles()) {
-            Role userRole = securityService.getRoleByName(String.valueOf(role));
-            roleUser.add(userRole);
-        }
-        user.setRoles(roleUser);
-        userService.updateUser(user, byCoding);
+        userService.updateUser(user);
     }
 
     @DeleteMapping(value = {"/delete/{id}"})

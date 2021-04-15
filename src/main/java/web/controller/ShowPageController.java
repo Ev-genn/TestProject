@@ -2,13 +2,8 @@ package web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import web.model.Role;
-import web.model.User;
-import web.service.SecurityService;
+import web.security.SecurityService;
 import web.service.UserService;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Controller
 public class ShowPageController {
@@ -22,6 +17,7 @@ public class ShowPageController {
 
     @GetMapping("/login")
     public String loginPage() {
+        /*
         if(securityService.getListRoles().isEmpty()){
            securityService.addRole("ROLE_ADMIN");
            securityService.addRole("ROLE_USER");
@@ -33,6 +29,8 @@ public class ShowPageController {
             user.setRoles(role);
             userService.addUser(user);
         }
+
+         */
         return "/login";}
 
     @GetMapping(value = "admin")
